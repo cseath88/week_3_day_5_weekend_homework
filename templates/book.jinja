@@ -1,19 +1,27 @@
 {% extends "base.jinja" %}
 
 {% block content %}
-
-<body>
-        <li>
-            <b> Title - </b> {{ book.title }}
-            <b> Author -  </b> {{ book.author }} 
-            <b> Genre - </b> {{ book.genre }} 
-        </li>
+    <h2>Book</h2>
+    <p>
+            <li>
+                <b> Title - </b> {{ book.title }}
+            </li>
+            <li>
+                <b> Author -  </b> {{ book.author }} 
+            </li>
+            <li>
+                <b> Genre - </b> {{ book.genre }} 
+            </li>
+            <li>
+                <b> Stock - </b> {{ book.status() }}
+            </li>
+    </p>
     <p>
         <a href="/library">Back to all books </a>
     </p>
-</body>
 
-    <form class="form-inline" action="/library/delete/{{ book.title }}" method="POST">
+
+    <form class="book-form" action="/library/delete/{{ book.title }}" method="POST">
         <input type="submit" value="Delete">
     </form>
 

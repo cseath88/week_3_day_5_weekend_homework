@@ -1,8 +1,8 @@
 from models.book import *
 
-book1 = Book("Blood Meridian", "Cormac McCarthy", "Western")
-book2 = Book("City Of Thieves", "David Benioff", "Historical Fiction")
-book3 = Book("American Kingpin", "Nick Bilton", "True Crime")
+book1 = Book("Blood Meridian", "Cormac McCarthy", "Western", checked_out=True)
+book2 = Book("City Of Thieves", "David Benioff", "Historical Fiction", checked_out=True)
+book3 = Book("American Kingpin", "Nick Bilton", "True Crime", checked_out=False)
 
 library = [book1, book2, book3]
 

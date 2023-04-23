@@ -6,15 +6,19 @@
         <p>
             <li>
                 <b> Title - </b> {{ book.title }}
-                <b> Author -  </b> {{ book.author }} 
-                <b> Genre - </b> {{ book.genre }} 
-                <p><a href="/book/{{library.index(book) + 1}}">  Go To Book</a></p>
             </li>
+            <li>
+                <b> Author -  </b> {{ book.author }} 
+            </li>
+            <li>
+                <b> Genre - </b> {{ book.genre }} 
+            </li>
+                <p><a href="/book/{{library.index(book) + 1}}">  Go To Book</a></p>
         </p>
         {% endfor %}
-
+    <hr>
     <h2>Add new book to library</h2>
-        <form class="form-inline" action="/library" method="post">
+        <form class="book-form" action="/library" method="post">
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
             <label for="author">Author</label>
